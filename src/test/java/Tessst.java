@@ -5,11 +5,13 @@ import PageObject.Jira.SecondPage;
 import PageObject.Jira.ThirdPage;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.page;
 
 public class Tessst extends WebHooks {
+    @Tag("001")
     @DisplayName("Авторизация")
     @Test
     public void loginJira() {
@@ -19,6 +21,7 @@ public class Tessst extends WebHooks {
                 .clickButtonLogIn();
     }
 
+    @Tag("002")
     @DisplayName("Заполнение второй страницы")
     @Test
     public void secondPageBrowse() {
@@ -35,6 +38,7 @@ public class Tessst extends WebHooks {
         page(SecondPage.class).checkingVersion();
     }
 
+    @Tag("003")
     @DisplayName("Заполнение третьей страницы")
     @Test
     public void thirdPageBrowse() {
@@ -61,6 +65,7 @@ public class Tessst extends WebHooks {
         page(ThirdPage.class).clickSubmit();
     }
 
+    @Tag("004")
     @DisplayName("Заполнение четвертой страницы")
     @Test
     public void fourthPageBrowse() {
