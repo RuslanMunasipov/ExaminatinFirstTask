@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.page;
 
-public class Tessst extends WebHooks {
+public class someTest extends WebHooks {
     @Tag("001")
     @DisplayName("Авторизация")
     @Test
